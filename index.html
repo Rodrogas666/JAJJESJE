@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>¿Eres una Tsundere? - Especial para Ti</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 20px;
+      }
+      .container {
+        max-width: 700px;
+        margin: auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1,
+      h3 {
+        text-align: center;
+        color: #333;
+      }
+      .question {
+        margin-bottom: 20px;
+      }
+      .question h3 {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+        color: #444;
+      }
+      .question label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      .question input {
+        margin-right: 10px;
+      }
+      #result {
+        margin-top: 30px;
+        font-size: 1.3em;
+        font-weight: bold;
+        text-align: center;
+        color: #444;
+        overflow: hidden; /* Evita que el contenido del div se desborde */
+      }
+
+      #result img {
+        display: block;
+        margin: 20px auto 0;
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        object-fit: contain; /* Asegura que la imagen se ajuste dentro del div */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>¿Eres una Tsundere?</h1>
+      <form id="tsundereForm">
+        <!-- Pregunta 1 -->
+        <div class="question">
+          <h3>
+            1. Cuando alguien te hace un cumplido sincero, ¿cómo sueles
+            reaccionar?
+          </h3>
+          <label
+            ><input type="radio" name="q1" value="1" /> Respondo con un
+            “gracias” y una sonrisa.</label
+          >
+          <label
+            ><input type="radio" name="q1" value="2" /> Me sonrojo un poco, pero
+            trato de actuar con indiferencia.</label
+          >
+          <label
+            ><input type="radio" name="q1" value="3" /> Niego el cumplido y digo
+            que no es verdad, pero en el fondo me siento feliz.</label
+          >
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="question">
+          <h3>
+            2. Si alguien que te gusta te invita a salir, ¿cómo responderías?
+          </h3>
+          <label
+            ><input type="radio" name="q2" value="1" /> Acepto emocionada y lo
+            hago saber.</label
+          >
+          <label
+            ><input type="radio" name="q2" value="2" /> Acepto, pero digo que
+            solo porque no tengo nada mejor que hacer.</label
+          >
+          <label
+            ><input type="radio" name="q2" value="3" /> Lo rechazo inicialmente,
+            pero luego cambio de opinión y acepto.</label
+          >
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div class="question">
+          <h3>
+            3. ¿Qué haces cuando alguien que te importa está en problemas?
+          </h3>
+          <label
+            ><input type="radio" name="q3" value="1" /> Le ofrezco ayuda de
+            inmediato, sin pensarlo.</label
+          >
+          <label
+            ><input type="radio" name="q3" value="2" /> Me hago la dura, pero
+            luego ayudo sin que se dé cuenta.</label
+          >
+          <label
+            ><input type="radio" name="q3" value="3" /> Le digo que se lo
+            merece, pero en secreto busco la manera de ayudar.</label
+          >
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div class="question">
+          <h3>
+            4. ¿Cómo te sientes cuando alguien te agradece por algo que has
+            hecho?
+          </h3>
+          <label
+            ><input type="radio" name="q4" value="1" /> Me siento bien y lo
+            acepto con gusto.</label
+          >
+          <label
+            ><input type="radio" name="q4" value="2" /> Finjo que no fue gran
+            cosa, pero me hace feliz.</label
+          >
+          <label
+            ><input type="radio" name="q4" value="3" /> Me pongo nerviosa y le
+            digo que no tiene por qué agradecer.</label
+          >
+        </div>
+
+        <!-- Pregunta 5 -->
+        <div class="question">
+          <h3>
+            5. Cuando te enfrentas a una situación difícil, ¿cómo manejas tus
+            emociones?
+          </h3>
+          <label
+            ><input type="radio" name="q5" value="1" /> Las expreso abiertamente
+            y busco apoyo.</label
+          >
+          <label
+            ><input type="radio" name="q5" value="2" /> Me las guardo y trato de
+            resolver todo por mi cuenta.</label
+          >
+          <label
+            ><input type="radio" name="q5" value="3" /> Actúo como si no me
+            importara, pero luego busco a alguien en quien confiar.</label
+          >
+        </div>
+
+        <!-- Pregunta 6 -->
+        <div class="question">
+          <h3>
+            6. Si alguien te confiesa sus sentimientos, pero tú no sabes cómo
+            responder, ¿qué harías?
+          </h3>
+          <label
+            ><input type="radio" name="q6" value="1" /> Lo tomo con calma y
+            hablo honestamente.</label
+          >
+          <label
+            ><input type="radio" name="q6" value="2" /> Digo algo confuso o
+            contradictorio, pero luego intento aclararlo.</label
+          >
+          <label
+            ><input type="radio" name="q6" value="3" /> Me sonrojo y actúo de
+            manera brusca para ocultar mis verdaderos sentimientos.</label
+          >
+        </div>
+
+        <!-- Pregunta 7 -->
+        <div class="question">
+          <h3>7. ¿Cómo te describirían tus amigos más cercanos?</h3>
+          <label
+            ><input type="radio" name="q7" value="1" /> Cariñosa y
+            directa.</label
+          >
+          <label
+            ><input type="radio" name="q7" value="2" /> Difícil de leer, pero
+            muy leal.</label
+          >
+          <label
+            ><input type="radio" name="q7" value="3" /> A veces fría, pero
+            siempre estás ahí cuando realmente importa.</label
+          >
+        </div>
+
+        <!-- Pregunta 8 -->
+        <div class="question">
+          <h3>8. Cuando alguien te provoca con bromas, ¿cómo reaccionas?</h3>
+          <label
+            ><input type="radio" name="q8" value="1" /> Me río y sigo la
+            broma.</label
+          >
+          <label
+            ><input type="radio" name="q8" value="2" /> Finjo estar enojada,
+            pero en realidad me divierto.</label
+          >
+          <label
+            ><input type="radio" name="q8" value="3" /> Les digo que dejen de
+            molestarme, pero sigo pensando en la broma.</label
+          >
+        </div>
+
+        <!-- Pregunta 9 -->
+        <div class="question">
+          <h3>
+            9. ¿Qué piensas cuando te das cuenta de que te preocupas mucho por
+            alguien?
+          </h3>
+          <label
+            ><input type="radio" name="q9" value="1" /> Lo acepto y se lo hago
+            saber.</label
+          >
+          <label
+            ><input type="radio" name="q9" value="2" /> Me sorprendo y trato de
+            ocultarlo.</label
+          >
+          <label
+            ><input type="radio" name="q9" value="3" /> Lo niego rotundamente,
+            incluso ante mí misma.</label
+          >
+        </div>
+
+        <!-- Pregunta 10 -->
+        <div class="question">
+          <h3>
+            10. Para finalizar, ¿qué pensarías si alguien te dijera que eres un
+            poco tsundere?
+          </h3>
+          <label
+            ><input type="radio" name="q10" value="1" /> Lo niego totalmente y
+            digo que no lo soy.</label
+          >
+          <label
+            ><input type="radio" name="q10" value="2" /> Me río nerviosamente y
+            digo que no es verdad… ¿verdad?</label
+          >
+          <label
+            ><input type="radio" name="q10" value="3" /> Les digo que están
+            equivocados, pero en el fondo me hace sonreír.</label
+          >
+        </div>
+
+        <!-- Pregunta 11 -->
+        <div class="question">
+          <h3>11. Si alguien te da un regalo inesperado, ¿cómo reaccionas?</h3>
+          <label
+            ><input type="radio" name="q11" value="1" /> Agradezco efusivamente
+            y lo recibo con una sonrisa.</label
+          >
+          <label
+            ><input type="radio" name="q11" value="2" /> Me sonrojo un poco y
+            digo que no era necesario, pero lo acepto.</label
+          >
+          <label
+            ><input type="radio" name="q11" value="3" /> Digo que no lo
+            necesito, pero lo guardo con cuidado.</label
+          >
+        </div>
+
+        <!-- Pregunta 12 -->
+        <div class="question">
+          <h3>
+            12. Cuando alguien se acerca demasiado a ti emocionalmente, ¿qué
+            sueles hacer?
+          </h3>
+          <label
+            ><input type="radio" name="q12" value="1" /> Me abro y comparto más
+            de mí.</label
+          >
+          <label
+            ><input type="radio" name="q12" value="2" /> Pongo un muro y trato
+            de distanciarme un poco.</label
+          >
+          <label
+            ><input type="radio" name="q12" value="3" /> Actúo indiferente, pero
+            en el fondo me gusta la cercanía.</label
+          >
+        </div>
+
+        <!-- Pregunta 13 -->
+        <div class="question">
+          <h3>13. Si estás preocupada por alguien, ¿cómo lo demuestras?</h3>
+          <label
+            ><input type="radio" name="q13" value="1" /> Le pregunto
+            directamente si está bien y le ofrezco mi ayuda.</label
+          >
+          <label
+            ><input type="radio" name="q13" value="2" /> Finjo que no me importa
+            mucho, pero hago pequeños gestos para ayudar.</label
+          >
+          <label
+            ><input type="radio" name="q13" value="3" /> Actúo como si no me
+            importara, pero me aseguro de estar cerca por si me necesita.</label
+          >
+        </div>
+
+        <!-- Pregunta 14 -->
+        <div class="question">
+          <h3>
+            14. Cuando alguien hace algo que te molesta, ¿cómo lo confrontas?
+          </h3>
+          <label
+            ><input type="radio" name="q14" value="1" /> Hablo directamente y
+            expreso lo que me molesta.</label
+          >
+          <label
+            ><input type="radio" name="q14" value="2" /> Hago un comentario
+            sarcástico, esperando que lo entiendan.</label
+          >
+          <label
+            ><input type="radio" name="q14" value="3" /> Les digo que no me
+            importa, pero luego me quedo pensando en ello.</label
+          >
+        </div>
+
+        <!-- Pregunta 15 -->
+        <div class="question">
+          <h3>
+            15. Si te das cuenta de que te estás enamorando, ¿cómo lo manejas?
+          </h3>
+          <label
+            ><input type="radio" name="q15" value="1" /> Lo acepto y trato de
+            acercarme más a la persona.</label
+          >
+          <label
+            ><input type="radio" name="q15" value="2" /> Lo niego inicialmente y
+            me comporto de manera más reservada.</label
+          >
+          <label
+            ><input type="radio" name="q15" value="3" /> Actúo de manera
+            contraria, siendo más fría o distante para ocultarlo.</label
+          >
+        </div>
+
+        <button type="button" onclick="calculateResult()">Enviar</button>
+      </form>
+
+      <div id="result"></div>
+    </div>
+
+    <script>
+      function calculateResult() {
+        let scoreA = 0;
+        let scoreB = 0;
+        let scoreC = 0;
+
+        const form = document.getElementById("tsundereForm");
+        const resultDiv = document.getElementById("result");
+
+        // Sumar los valores según las respuestas seleccionadas
+        const questions = form.querySelectorAll(".question");
+        questions.forEach((question) => {
+          const selected = question.querySelector(
+            'input[type="radio"]:checked'
+          );
+          if (selected) {
+            if (selected.value === "1") {
+              scoreA++;
+            } else if (selected.value === "2") {
+              scoreB++;
+            } else if (selected.value === "3") {
+              scoreC++;
+            }
+          }
+        });
+
+        // Determinar el mensaje e imagen según el puntaje
+        let resultMessage = "";
+        let resultImage = "";
+
+        if (scoreA > scoreB && scoreA > scoreC) {
+          resultMessage =
+            "Tu corazón es puro y sincero, siempre muestras lo que sientes sin miedo. Eres una persona abierta, y aunque puedes ser fuerte, tu calidez y honestidad hacen que todos se sientan cómodos a tu lado. Aunque quizá no seas una tsundere, tu forma de ser es realmente admirable y querida. 🌟 ヾ(^▽^*)))";
+          resultImage = "./imagen1.jfif"; // Coloca aquí la URL o ruta de la imagen.
+        } else if (scoreB > scoreA && scoreB > scoreC) {
+          resultMessage =
+            "Tienes una fachada dura, pero dentro de ti hay un corazón tierno y lleno de amor. Eres como una verdadera tsundere: difícil de leer al principio, pero increíblemente leal y cariñosa una vez que alguien te conoce bien. Es esa dualidad lo que te hace tan especial y encantadora. 🌸 ヾ(≧▽≦*)o";
+          resultImage = "./imagen2.jpg"; // Coloca aquí la URL o ruta de la imagen.
+        } else if (scoreC > scoreA && scoreC > scoreB) {
+          resultMessage =
+            "¡Oh, definitivamente eres una tsundere en todo el sentido de la palabra! Aunque a veces te cuesta mostrar tus sentimientos, y puedes parecer fría o distante, en el fondo tienes un corazón que se preocupa profundamente. Esa mezcla de dureza externa y suavidad interna es lo que te hace única y absolutamente adorable. 💖 Sí sos ╰(*°▽°*)╯";
+          resultImage = "./imagen3.png"; // Coloca aquí la URL o ruta de la imagen.
+        } else {
+          resultMessage =
+            "Tienes una mezcla perfecta de emociones y reacciones. No te dejas llevar por una sola forma de ser, y eso te hace increíblemente versátil y auténtica. Quizá no encajes en el arquetipo clásico de una tsundere, pero tu personalidad es un hermoso balance que te define a la perfección. 🌈 (￣y▽￣)╭ ";
+          resultImage = "./imagen4.jpg"; // Coloca aquí la URL o ruta de la imagen.
+        }
+
+        // Mostrar el resultado con animación
+        resultDiv.style.opacity = "0";
+        setTimeout(() => {
+          resultDiv.innerHTML =
+            resultMessage + `<br> <img src="${resultImage}" alt="Resultado">`;
+          resultDiv.style.opacity = "1";
+        }, 1000);
+      }
+    </script>
+  </body>
+</html>
